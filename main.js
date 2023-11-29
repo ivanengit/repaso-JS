@@ -37,8 +37,7 @@ const checkEmail = () => {
 const checkPassword = () => {
   let isValid = false;
   const password = passwordInput.value;
-  console.log(password);
-  if (isEmpty(password)) {
+  if (isEmpty(passwordInput)) {
     showError(passwordInput, "La contraseña es requerida");
   } else if (!isPasswordValid(password)) {
     showError(
@@ -276,7 +275,7 @@ const moviesContainer = document.getElementById('movies-container')
 
 const getMovieHtml = movie => {
   return `
-  <div style="border: 1px solid white;">
+  <div style="border: 2px solid white;">
   <h3>${movie.title}</h3>
   <p>${movie.overview}</p>
   <ul>
